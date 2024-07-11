@@ -10,8 +10,9 @@ class App extends Component {
             posi : 0,
             ballPosition: { left: "0px" }
         };
-        this.renderChoice = this.renderBallOrButton.bind(this)
-        this.buttonClickHandler = this.buttonClickHandler.bind(this)
+        this.renderChoice = this.renderBallOrButton.bind(this);
+        this.buttonClickHandler = this.buttonClickHandler.bind(this);
+        this.handleKeyDown = this.handleKeyDown.bind(this);
     };
 
     buttonClickHandler() {
@@ -50,7 +51,7 @@ class App extends Component {
     render() {
         return (
             <div className="playground">
-                {this.renderBallOrButton()}
+                {this.renderChoice()}
             </div>
         )
     }
